@@ -43,4 +43,12 @@ fakeApi = () => {
   res.render('main', {layout: 'index', suggestedChamps: fakeApi(), listExists: true});
   });
 
+ app.get('/ciao",(req,res)=>{
+    const query = req.query
+    const headers = req.headers.["User-Agent"]
+         console.log(headers)
+    res.send("ciao "+ req.query.name+"<br/>" + "il tuo user agent è"  +headers)
+  });
+
+
 app.listen(port, () => console.log(`App listening to port ${port}`));
