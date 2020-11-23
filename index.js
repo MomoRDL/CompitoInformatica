@@ -47,7 +47,7 @@ fakeApi = () => {
     const query = req.query
     const headers = req.headers.["User-Agent"]
          console.log(headers)
-    res.send("ciao "+ req.query.name+"<br/>" + "il tuo user agent è"  +headers)
+    res.send("ciao "+ req.query.name+"<br/>" + "il tuo user agent è"  +headers + req.query.surname+"<br/> + req.query.nation+"<br/>"  "  )
   });
 
 
